@@ -5,7 +5,7 @@ let images=["1661520557100.jpg","meme1.jpg",
 
  let index=0;
   document.getElementById("prev").addEventListener("click",function(){
-    index=(index-1)% images.length
+    index=(index-1+images.length)% images.length
 document.getElementById("img").src=images[index]
  }) 
   document.getElementById("next").addEventListener("click",function(){
@@ -17,4 +17,5 @@ document.getElementById("img").src=images[index]
      index=(index+1)% images.length
       document.getElementById("img").src=images[index]
  }
+
   setInterval(nextimage,2600);
